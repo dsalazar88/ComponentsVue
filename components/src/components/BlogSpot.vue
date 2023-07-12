@@ -6,7 +6,7 @@
 */ --> 
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title" :class="`text-${colorText}`">{{ title }}</h5>
+            <h5 class="card-title" >{{ title }}</h5>
             
             <p>{{ body }}</p>
 
@@ -19,14 +19,14 @@
 <script setup>
 
 defineProps({
-    title: String,
+    title: Number,
     id: Number,
     body: {
         type: String,
         default: "Sin descripcion",
     },
-    colorText:String
 })
 
+/**@constant {Events} - Declaration of emit events */
 const emit = defineEmits(['changeFavorite'])
 </script>
